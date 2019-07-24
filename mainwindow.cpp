@@ -1,0 +1,31 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    if (ui->pushButton->text() == "Пауза") {
+        ui->pushButton->setText("Продолжить");
+        ui->widget->pause();
+    } else {
+        ui->pushButton->setText("Пауза");
+        ui->widget->resume();
+    }
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->widget->start(100);
+}
