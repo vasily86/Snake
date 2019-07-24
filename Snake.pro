@@ -27,17 +27,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    SnakeWidget.cpp \
-    PacmanWidget.cpp \
-    form.cpp \
-    FractalM.cpp
+    SnakeWidget.cpp
 
 HEADERS  += mainwindow.h \
     SnakeWidget.h \
-    PacmanWidget.h \
-    form.h \
-    motionside.h \
-    FractalM.h
+    motionside.h
 
 FORMS    += mainwindow.ui \
     form.ui
